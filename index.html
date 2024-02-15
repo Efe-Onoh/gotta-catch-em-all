@@ -4,29 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gotta Catch 'Em All</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./src/styles/main.css">
 </head>
 <body>
     <div class="container">
-        <input type="text" id="search-input">
-        <button id="search-button">Search</button>
+        <div id="search-container">
+            <input type="text" id="search-input" required>
+            <button id="search-button">Search</button>
+        </div>
         <div id="pokemon-info">
-            <div id="pokemon-name"></div>
-            <div id="sprite"></div>
-            <div id="pokemon-id"></div>
-            <div id="weight"></div>
-            <div id="height"></div>
-            <div id="types"></div>
-            <div id="stats">
-                <div id="hp"></div>
-                <div id="attack"></div>
-                <div id="defense"></div>
-                <div id="special-attack"></div>
-                <div id="special-defense"></div>
-                <div id="speed"></div>
+            <div id="pokemon-info-wrapper">
+                <div id="pokemon-name-hp">
+                    <div id="pokemon-name"></div>
+                    <div id="hp"></div>
+                </div>
+
+                <div id="sprite"></div>
+                <div id="pokemon-id"></div>
+                <div id="types"></div>
+                <div id="weight"></div>
+                <div id="height"></div>
+                <div id="stats">
+                    <label class="stat-label hidden" for="attack">ATT</label>
+                    <div id="attack"></div>
+                    <label class="stat-label hidden" for="defense">DEF</label>
+                    <div id="defense"></div>
+                    <label class="stat-label hidden" for="special-attack">SpATT</label>
+                    <div id="special-attack"></div>
+                    <label class="stat-label hidden" for="special-defense">SpDEF</label>
+                    <div id="special-defense"></div>
+                    <label class="stat-label hidden" for="speed">SPEED</label>
+                    <div id="speed"></div>
+                </div>
             </div>
         </div>
     </div>
-    <script src="js/script.js"></script>
+    <script src="./src/index.js"></script>
 </body>
 </html>

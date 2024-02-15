@@ -27,12 +27,17 @@ console.log("pokemon", pokemon)
 if(pokemon){
     fetch(pokemon.url.replace(/http/,"https"))
     .then(response => {
-          console.log("response:",response)
           return response.json()
         
         })
         .then(data => {
-          console.log("data:", data)
+          console.log("pokemon data:", data)
+
+          fetch(data.types[0].type.url).then(response=>{
+            return response.json()
+          }).then(data=>{
+            console.log("types data:", data)
+          })
 
 pokemonName.innerText = `${data.name.toUpperCase()}`;
 pokemonId.innerText = `#${data.id}`;

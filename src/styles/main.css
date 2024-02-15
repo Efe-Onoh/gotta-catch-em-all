@@ -9,14 +9,23 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+#search-container{
+    display: flex;
+    justify-content: center;
+}
 #search-input {
     padding: 8px;
     font-size: 16px;
     border: 2px solid #ccc;
     border-radius: 5px;
     margin-right: 10px;
+    min-width: 100%
 }
 
 #search-button {
@@ -24,21 +33,27 @@ body {
     font-size: 16px;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
-    background-color: #ff6600; /* Orange */
-    color: white;
+    background-color: #fff; /* Orange */
+    color: #000;
     border: none;
     cursor: pointer;
     border-radius: 5px;
 }
 
 #search-button:hover {
-    background-color: #ff8000; /* Lighter Orange */
+    background-color: #ccc; /* Lighter Orange */
 }
 
 #pokemon-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+    min-height: 400px;
     background-color: #fff;
     border-radius: 8px;
-    padding: 20px;
+    padding: 10px 15px;
     margin-top: 20px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
@@ -47,20 +62,31 @@ body {
     margin-bottom: 10px;
 }
 
-#pokemon-name {
-    font-size: 24px;
+#pokemon-info-wrapper{
+    min-width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 0 10px;
+}
+#pokemon-info-wrapper div {
+    margin-bottom: 10px;
+}
+
+#pokemon-name-hp{
+    display: flex;
+    justify-content: space-between;
+    font-size: 19px;
     font-weight: bold;
-    color: #ff0000; /* Pikachu red */
+
 }
 
 #sprite img {
-    max-width: 200px;
+    max-width: fit-content;
     height: auto;
     display: block;
     margin: 0 auto;
     margin-bottom: 20px;
     border-radius: 8px;
-    border: 2px solid #ffcc00; /* Pikachu yellow */
 }
 
 #types span {
@@ -72,14 +98,19 @@ body {
     margin-right: 5px;
 }
 
+#stats {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat-label.hidden{
+    display: none;
+}
 #stats div {
     display: inline-block;
-    width: 120px;
-    margin-right: 10px;
-    background-color: #0066cc; /* Water blue */
-    color: white;
-    padding: 5px;
-    border-radius: 5px;
+    font-weight: bold;
+    font-size: 17px;
+
 }
 
 #stats span {
